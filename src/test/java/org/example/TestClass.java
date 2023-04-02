@@ -105,4 +105,105 @@ public class TestClass {
         }
     }
 
+    @Test
+    public void addStudent_EmptyName_ThrowError() {
+        String idStudent = "test1";
+        String numeStudent = "";
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        try {
+            service.addStudent(student);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addStudent_NullName_ThrowError() {
+        String idStudent = "test2";
+        String numeStudent = null;
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        try {
+            service.addStudent(student);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addStudent_NegativeGroupNr_ThrowError() {
+        String idStudent = "test3";
+        String numeStudent = "miguel";
+        int grupa = -931;
+        String email = "miguel@yahoo.com";
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        try {
+            service.addStudent(student);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addStudent_EmptyEmail_ThrowError() {
+        String idStudent = "test4";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = "";
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        try {
+            service.addStudent(student);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addStudent_NullEmail_ThrowError() {
+        String idStudent = "test5";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = null;
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        try {
+            service.addStudent(student);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addStudent_LowerBoundGroupNr_ThrowError() {
+        String idStudent = "test6";
+        String numeStudent = "miguel";
+        int grupa = 0;
+        String email = "miguel@yahoo.com";
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        try {
+            Student result = service.addStudent(student);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(true);
+        }
+        assert(service.findStudent(idStudent) != null);
+    }
 }
