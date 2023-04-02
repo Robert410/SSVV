@@ -83,7 +83,7 @@ public class TestClass {
         try {
             service.addStudent(student);
             assert(true);
-        } catch (ValidationException | NullPointerException exception) {
+        } catch (ValidationException exception) {
             System.out.println(exception);
             assert(true);
         }
