@@ -40,9 +40,9 @@ public class TestClass {
     @Test
     public void addStudent_ValidData_CreatedSuccessfully() {
         String idStudent = "test";
-        String numeStudent = "john";
-        int grupa = 934;
-        String email = "john_doe@yahoo.com";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
         Student student = new Student(idStudent, numeStudent, grupa, email);
 
         try {
@@ -58,9 +58,9 @@ public class TestClass {
     @Test
     public void addStudent_EmptyId_ThrowError() {
         String idStudent = "";
-        String numeStudent = "john";
-        int grupa = 934;
-        String email = "john_doe@yahoo.com";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
         Student student = new Student(idStudent, numeStudent, grupa, email);
 
         try {
@@ -75,9 +75,9 @@ public class TestClass {
     @Test
     public void addStudent_NullId_ThrowError() {
         String idStudent = null;
-        String numeStudent = "john";
-        int grupa = 934;
-        String email = "john_doe@yahoo.com";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
         Student student = new Student(idStudent, numeStudent, grupa, email);
 
         try {
@@ -92,9 +92,9 @@ public class TestClass {
     @Test
     public void addStudent_DuplicateId_ThrowError() {
         String idStudent = "test";
-        String numeStudent = "john";
-        int grupa = 934;
-        String email = "john_doe@yahoo.com";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
         Student student = new Student(idStudent, numeStudent, grupa, email);
 
         try {
