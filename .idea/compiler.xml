@@ -7,11 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Lab1" />
+<<<<<<< HEAD
         <module name="SSVV" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SSVV" target="1.8" />
+=======
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Lab1" target="8" />
+>>>>>>> 9fbc7c46b768de422f5c8d7b69b973343c6a66b1
     </bytecodeTargetLevel>
   </component>
 </project>
