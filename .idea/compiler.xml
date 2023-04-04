@@ -10,5 +10,8 @@
         <module name="SSVV" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SSVV" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
