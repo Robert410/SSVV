@@ -38,6 +38,7 @@ public class TestClass {
         TestClass.service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
     }
 
+    // White box testing
     @Test
     public void addTema_ValidData_CreateSuccessfully() {
         String nrTema = "100";
@@ -55,7 +56,23 @@ public class TestClass {
     }
 
     @Test
-    public void addTema_Invalid_nrTema_ThrowsError() {
+    public void addTema_Invalid_nrTema_emptyString_ThrowsError() {
+        String nrTema = "";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 2;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addTema_Invalid_nrTema_null_ThrowsError() {
         String nrTema = null;
         String descriere = "test";
         int deadline = 12;
@@ -70,6 +87,140 @@ public class TestClass {
         }
     }
 
+    @Test
+    public void addTema_Invalid_descriere_emptyString_ThrowsError() {
+
+        String nrTema = "101";
+        String descriere = "";
+        int deadline = 12;
+        int primire = 2;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+    @Test
+    public void addTema_Invalid_descriere_null_ThrowsError() {
+
+        String nrTema = "101";
+        String descriere = null;
+        int deadline = 12;
+        int primire = 2;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+
+    @Test
+    public void addTema_Invalid_deadline_smallerThan1_ThrowsError() {
+
+        String nrTema = "102";
+        String descriere = "test";
+        int deadline = 0;
+        int primire = 11;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+    @Test
+    public void addTema_Invalid_deadline_greaterThan14_ThrowsError() {
+
+        String nrTema = "102";
+        String descriere = "test";
+        int deadline = 15;
+        int primire = 11;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+    @Test
+    public void addTema_Invalid_primire_smallerThan1_ThrowsError() {
+
+        String nrTema = "103";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 0;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+    @Test
+    public void addTema_Invalid_primire_greaterThan14_ThrowsError() {
+
+        String nrTema = "103";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 15;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+    // Black box testing
     @Test
     public void addStudent_ValidData_CreatedSuccessfully() {
         String idStudent = "test";
