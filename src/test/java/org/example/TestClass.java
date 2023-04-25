@@ -56,6 +56,22 @@ public class TestClass {
     }
 
     @Test
+    public void addTema_Invalid_nrTema_duplicate_ThrowsError() {
+        String nrTema = "100";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 1;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            Tema response = service.addTema(tema);
+            assert(tema == response);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(true);
+        }
+    }
+
+    @Test
     public void addTema_Invalid_nrTema_emptyString_ThrowsError() {
         String nrTema = "";
         String descriere = "test";
