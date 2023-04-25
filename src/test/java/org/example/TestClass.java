@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.domain.Nota;
 import org.example.domain.Student;
 import org.example.domain.Tema;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,8 @@ import org.example.validation.NotaValidator;
 import org.example.validation.StudentValidator;
 import org.example.validation.TemaValidator;
 import org.example.validation.ValidationException;
+
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,6 +39,87 @@ public class TestClass {
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         TestClass.service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+    }
+
+    // Big-bang Integration testing
+    @Test
+    public void addStudent_BigBang_ValidData_CreatedSuccessfully() {
+        String idStudent = "st1";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+        try {
+            service.addStudent(student);
+            assert(true);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(false);
+        }
+        assert (service.findStudent(idStudent) != null);
+    }
+
+    @Test
+    public void addTema_BigBang_ValidData_CreatedSuccessfully() {
+        String nrTema = "tm1";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 1;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(true);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(false);
+        }
+    }
+
+    @Test
+    public void addNota_BigBang_ValidData_CreatedSuccessfully() {
+        String notaId = "nt1";
+        String studentId = "1002";
+        String temaId = "100";
+        double nota = 9.5;
+        LocalDate date = LocalDate.of(2023, 4, 25);
+        Nota notaObj = new Nota(notaId, studentId, temaId, nota, date);
+        try {
+            service.addNota(notaObj, "feedback");
+            assert(true);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(false);
+        }
+    }
+
+    @Test
+    public void addNota_Integration_ValidData_CreatedSuccessfully() {
+        String idStudent = "st2";
+        String numeStudent = "miguel";
+        int grupa = 931;
+        String email = "miguel@yahoo.com";
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        String nrTema = "tm2";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 1;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+
+        String notaId = "nt1";
+        double nota = 9.5;
+        LocalDate date = LocalDate.of(2023, 4, 25);
+        Nota notaObj = new Nota(notaId, idStudent, nrTema, nota, date);
+
+        try {
+            service.addStudent(student);
+            service.addTema(tema);
+            service.addNota(notaObj, "feedback");
+            assert(true);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(false);
+        }
     }
 
     // White box testing
