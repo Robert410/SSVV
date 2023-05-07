@@ -7,12 +7,9 @@
     <list default="true" id="fef60dea-4071-49f2-a5c4-e4c587553e0c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab03_WBT_Form.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Lab03_WBT_Form.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fisiere/DataInceput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/DataInceput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Note.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Studenti.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Teme.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/TestClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/TestClass.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +152,9 @@
       <workItem from="1682102921461" duration="2458000" />
       <workItem from="1682423463572" duration="1278000" />
       <workItem from="1682424824324" duration="2000" />
-      <workItem from="1682427730270" duration="2534000" />
+      <workItem from="1682427730270" duration="3640000" />
+      <workItem from="1682879951170" duration="168000" />
+      <workItem from="1683497494098" duration="423000" />
     </task>
     <servers />
   </component>
