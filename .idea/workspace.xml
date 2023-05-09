@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fef60dea-4071-49f2-a5c4-e4c587553e0c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab03_WBT_Form.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Lab03_WBT_Form.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Note.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Studenti.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Teme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +46,56 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="JUnit.TestClass.addNota_Integration_ValidData_CreatedSuccessfully">
-    <configuration name="TestClass.addNota_BigBang_ValidData_CreatedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestClass">
+    <configuration name="MokitoTestClass.addStudent_InvalidNume_ThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.MokitoTestClass" />
+      <option name="METHOD_NAME" value="addStudent_InvalidNume_ThrowsException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MokitoTestClass.addStudent_Valid_addTema_InvalidDeadline_ThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.MokitoTestClass" />
+      <option name="METHOD_NAME" value="addStudent_Valid_addTema_InvalidDeadline_ThrowsException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MokitoTestClass.addStudent_Valid_addTema_Valid_addNota_Valid_ThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.MokitoTestClass" />
+      <option name="METHOD_NAME" value="addStudent_Valid_addTema_Valid_addNota_Valid_ThrowsException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab1" />
       <extension name="coverage">
         <pattern>
@@ -57,8 +105,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.TestClass" />
-      <option name="METHOD_NAME" value="addNota_BigBang_ValidData_CreatedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,61 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClass.addStudent_BigBang_ValidData_CreatedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TestClass" />
-      <option name="METHOD_NAME" value="addStudent_BigBang_ValidData_CreatedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestClass.addTema_BigBang_ValidData_CreatedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TestClass" />
-      <option name="METHOD_NAME" value="addTema_BigBang_ValidData_CreatedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestClass.addTema_Invalid_nrTema_duplicate_ThrowsError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TestClass" />
-      <option name="METHOD_NAME" value="addTema_Invalid_nrTema_duplicate_ThrowsError" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestClass" />
+        <item itemvalue="JUnit.MokitoTestClass.addStudent_Valid_addTema_Valid_addNota_Valid_ThrowsException" />
+        <item itemvalue="JUnit.MokitoTestClass.addStudent_Valid_addTema_InvalidDeadline_ThrowsException" />
+        <item itemvalue="JUnit.MokitoTestClass.addStudent_InvalidNume_ThrowsException" />
         <item itemvalue="JUnit.TestClass.addNota_Integration_ValidData_CreatedSuccessfully" />
-        <item itemvalue="JUnit.TestClass.addNota_BigBang_ValidData_CreatedSuccessfully" />
-        <item itemvalue="JUnit.TestClass.addTema_BigBang_ValidData_CreatedSuccessfully" />
-        <item itemvalue="JUnit.TestClass.addStudent_BigBang_ValidData_CreatedSuccessfully" />
-        <item itemvalue="JUnit.TestClass.addTema_Invalid_nrTema_duplicate_ThrowsError" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +153,10 @@
       <workItem from="1682424824324" duration="2000" />
       <workItem from="1682427730270" duration="3640000" />
       <workItem from="1682879951170" duration="168000" />
-      <workItem from="1683497494098" duration="423000" />
+      <workItem from="1683497494098" duration="1082000" />
+      <workItem from="1683557880141" duration="2468000" />
+      <workItem from="1683560521313" duration="321000" />
+      <workItem from="1683626091441" duration="974000" />
     </task>
     <servers />
   </component>
